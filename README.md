@@ -1,6 +1,7 @@
 # Getting and Cleaning Data Course Project (JH Data Science Project)
 
 Files in repo:
+	
 	README.md
 	CodeBook.md
 	run_analysis.r
@@ -8,8 +9,10 @@ each are detailed further below, as well as more information about source data a
 
 OVERVIEW:
 =====================================
-The code/script to run the data transformation (run_analysis.r) will run as long as it is in the same directory with the data files (described below)
-Health Warning:  Have had a family emergency the last two weeks, so coding has been left at functional stage, not the most elegant and compact as I would have preferred.  Apologies for that, but it is probably easier to follow this way.
+The code/script to run the data transformation (run_analysis.r) will run as long as it is in the same directory with the data
+files (described below)
+
+	Health Warning:  Have had a family emergency the last two weeks, so coding has been left at functional stage, not the most elegant and compact as I would have preferred.  Apologies for that, but it is probably easier to follow this way.
 
 CODEBOOK:
 ===========================================
@@ -21,6 +24,7 @@ DATA FILES:
 In order for the script to run, the data files are required in the same structure as the downloaded zip file with "features.txt" and "activity_labels" at the root alongside two directories (test and train) below
 
 Specifically:
+
 	- 'features.txt': List of all features.
 	- 'activity_labels.txt': Links the class labels with their activity name.
 	- 'train/X_train.txt': Training set.
@@ -31,6 +35,7 @@ Specifically:
 	- 'train/subject_test.txt': Each row identifies the subject who performed the activity for each window sample. 
 
 Additional information about source data and measures is below, including:
+
 	- description of experiements
 	- detailed definitions of data measurements
 	- license and background information 
@@ -42,16 +47,19 @@ run_analysis.R - The code is commented, but a brief overview of steps taken is b
 Packages Required
   The code reads 'dplyr' and 'data.table' into the library
 
-URLs - 8 Urls are defined.  
-    	(1-6) for the data (3 each for test and train)
+URLs - 8 Urls are defined.
+
+	(1-6) for the data (3 each for test and train)
     	(7) activity_labels to give the activities meaningful names
     	(8) and features.txt in order to identify the variable columns required and give them meaningful names.
 
 Read data into dataframes
+
 	All six files from the test and train directories are read into dataframes
 	As well as the activity and variable names
 
 Keep Mean and Standard Deviation measures
+
 	The column names with mean and STD variable names are each pulled into a list then combined into one list ("colkeep")
 
 Assign column names (or variable) to the 6 working data frames; column names are assigned to the activity table to that it can be joined to final table in order to update the activity names (vs ID#)
@@ -60,6 +68,7 @@ Create subsets of x data and features, with just needed variables
 	The test x-dataframe, train x-dataframe and featurenames are created with just the identified mean and std variables using the "keep" list created earlier
 
 Merge and format final dataset
+
 	Test and Train x data tables (limited to mean and std) are each combined with their subject and activity identifiers (with cbind)
 	Then combined together into one data table (using rbind), then converted to a dplyr dataframe
 	The combined data table is joined with the activity table in order to include Activity labels, then the activity ID is dropped
@@ -83,7 +92,7 @@ Version 1.0
 ------------------------------------------------------------------
 Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
 Smartlab - Non Linear Complex Systems Laboratory
-DITEN - Universit‡ degli Studi di Genova.
+DITEN - Universit√† degli Studi di Genova.
 Via Opera Pia 11A, I-16145, Genoa, Italy.
 activityrecognition@smartlab.ws
 www.smartlab.ws
