@@ -1,6 +1,6 @@
 # CodeBook.md
 
-##Getting and Cleaning Data Course Project (JH Data Science Project)
+Getting and Cleaning Data Course Project (JH Data Science Project)
 
 =========================================
 Description of tidydata.txt 
@@ -11,7 +11,8 @@ Subject
 	Identifier of subject who carried out the experiment
  	Ranges from 1 to 30
 
-Activity  
+Activity 
+
 	WALKING
 
 	WALKING_UPSTAIRS
