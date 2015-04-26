@@ -7,7 +7,7 @@ Files in repo:
 	run_analysis.r
 each are detailed further below, as well as more information about source data and credits
 
-OVERVIEW:
+##OVERVIEW:
 =====================================
 The code/script to run the data transformation (run_analysis.r) will run as long as it is in the same directory with the data
 files (described below)
@@ -47,27 +47,27 @@ run_analysis.R - The code is commented, but a brief overview of steps taken is b
 Packages Required
   The code reads 'dplyr' and 'data.table' into the library
 
-URLs - 8 Urls are defined.
+URLs - 8 Urls are defined:
 
 	(1-6) for the data (3 each for test and train)
-    	(7) activity_labels to give the activities meaningful names
-    	(8) and features.txt in order to identify the variable columns required and give them meaningful names.
+	(7) activity_labels to give the activities meaningful names
+	(8) and features.txt in order to identify the variable columns required and give them meaningful names.
 
-Read data into dataframes
+Read data into dataframes:
 
 	All six files from the test and train directories are read into dataframes
 	As well as the activity and variable names
 
-Keep Mean and Standard Deviation measures
+Keep Mean and Standard Deviation measures:
 
 	The column names with mean and STD variable names are each pulled into a list then combined into one list ("colkeep")
 
-Assign column names (or variable) to the 6 working data frames; column names are assigned to the activity table to that it can be joined to final table in order to update the activity names (vs ID#)
+Assign column names (or variable) to the 6 working data frames; column names are assigned to the activity table so that it can be joined to final table in order to update the activity names (vs ID#)
 
-Create subsets of x data and features, with just needed variables
+Create subsets of x data and features, with just needed variables:
 	The test x-dataframe, train x-dataframe and featurenames are created with just the identified mean and std variables using the "keep" list created earlier
 
-Merge and format final dataset
+Merge and format final dataset:
 
 	Test and Train x data tables (limited to mean and std) are each combined with their subject and activity identifiers (with cbind)
 	Then combined together into one data table (using rbind), then converted to a dplyr dataframe
