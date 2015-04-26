@@ -27,6 +27,7 @@ Activity
 
 
 Variable (described as "Features" in documentation - more detail below)
+	
 	"tBodyAcc-mean()-X"
 	"tBodyAcc-mean()-Y"
 	"tBodyAcc-mean()-Z"
