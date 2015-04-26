@@ -5,7 +5,7 @@
 =========================================
 Description of tidydata.txt 
 =========================================
-4 columns"
+4 columns
 
 Subject	 
 	Identifier of subject who carried out the experiment
@@ -26,19 +26,19 @@ Activity
 
 
 Variable (described as "Features" in documentation - more detail below)
-    "tBodyAcc-mean()-X"
-    "tBodyAcc-mean()-Y"
-    "tBodyAcc-mean()-Z"
-    "tGravityAcc-mean()-X"
-    "tGravityAcc-mean()-Y"
-    "tGravityAcc-mean()-Z"
-    "tBodyAccJerk-mean()-X"
-    "tBodyAccJerk-mean()-Y"
-    "tBodyAccJerk-mean()-Z"
-    "tBodyGyro-mean()-X"
-    "tBodyGyro-mean()-Y"
-    "tBodyGyro-mean()-Z"
-    "tBodyGyroJerk-mean()-X"
+	"tBodyAcc-mean()-X"
+	"tBodyAcc-mean()-Y"
+	"tBodyAcc-mean()-Z"
+	"tGravityAcc-mean()-X"
+	"tGravityAcc-mean()-Y"
+	"tGravityAcc-mean()-Z"
+	"tBodyAccJerk-mean()-X"
+	"tBodyAccJerk-mean()-Y"
+	"tBodyAccJerk-mean()-Z"
+	"tBodyGyro-mean()-X"
+	"tBodyGyro-mean()-Y"
+	"tBodyGyro-mean()-Z"
+	"tBodyGyroJerk-mean()-X"
     "tBodyGyroJerk-mean()-Y"
     "tBodyGyroJerk-mean()-Z"
     "tBodyAccMag-mean()"
