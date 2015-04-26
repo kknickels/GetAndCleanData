@@ -32,7 +32,8 @@ mydata6 <- read.table(url6, sep="",header=FALSE, na.strings=c("NA", "N/A","?"),
 myheaders <- read.table(urlfeatures, sep="",header=FALSE, stringsAsFactors=FALSE,nrows=-1L)
 myactivity <- read.table(urlactivity, sep="",header=FALSE, stringsAsFactors=FALSE,nrows=-1L)
 
-#create list of variables, identify mean and std and create the list of variables (as columns)
+#create list of variables, identify all with "mean" or "std" in the names and create the list of variables (as columns)
+#which would include meanFreq() measures but not the measures for the additional 'Angle' features
 
 myheaderlist <- c(myheaders[ ,2])
 stdcol<- grep("std",myheaderlist)
@@ -72,7 +73,7 @@ myfinalDFLong <- myfinalDF %>% gather(Variable, Measure, -Subject, -Activity)
 #group by subject, activity and variables
 DFGroup <- group_by(myfinalDFLong,Subject,Activity,Variable)
 
-#caculate the average for each
+#caculate the mean for each
 DFResult <- summarise(DFGroup,MEAN = mean(Measure))
 
 #export data to file
