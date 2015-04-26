@@ -1,4 +1,4 @@
-# Getting and Cleaning Data Course Project (JH Data Science Project)
+# Getting and Cleaning Data Course Project
 
 Files in repo:
 	
@@ -14,12 +14,12 @@ files (described below)
 
 	Health Warning:  Have had a family emergency the last two weeks, so coding has been left at functional stage, not the most elegant and compact as I would have preferred.  Apologies for that, but it is probably easier to follow this way.
 
-CODEBOOK:
+##CODEBOOK:
 ===========================================
 'CodeBook.md' contains 
 	- a definition of dataset and columns
 
-DATA FILES:
+##DATA FILES:
 ===========================================
 In order for the script to run, the data files are required in the same structure as the downloaded zip file with "features.txt" and "activity_labels" at the root alongside two directories (test and train) below
 
@@ -40,7 +40,7 @@ Additional information about source data and measures is below, including:
 	- detailed definitions of data measurements
 	- license and background information 
 
-SCRIPT:
+##SCRIPT:
 ========================================
 run_analysis.R - The code is commented, but a brief overview of steps taken is below.
 
@@ -84,7 +84,7 @@ More information about underlying source data:
 
 
 ============================================================
-Credits, license and experiment description:
+##Credits, license and experiment description:
 =============================================================
 
 Human Activity Recognition Using Smartphones Dataset
@@ -102,7 +102,7 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. See 'features_info.txt' for more details. 
 
-Provided for each record was:
+Provided for each record:
 -----------------------------------
 
 - Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
