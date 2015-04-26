@@ -45,7 +45,7 @@ SCRIPT:
 run_analysis.R - The code is commented, but a brief overview of steps taken is below.
 
 Packages Required
-  The code reads 'dplyr' and 'data.table' into the library
+  The code includes 'dplyr', 'tidyr' and 'data.table' in the library
 
 URLs - 8 Urls are defined:
 
